@@ -1,0 +1,53 @@
+url = urllib.urlopen(url).read()
+soup = BeautifulSoup(url)
+tags = soup('a')
+
+url = tags[2].get('href', None)
+print url
+
+# for tag in tags:
+#     
+#     #1 Input the url into the urllib.urlopen to get the list of all the html page
+#     #2 pass it to Beautiful soap to tidy up the html page
+#     #3 retrieve only anchor tags
+#     #4 move down three positions starting from current pos
+#     #5 get the anchor tag, remove the href part and only get the http part
+#     
+#     #6 repeat step 1 - 5 for however number of counts passed by the user
+#     
+#     
+#     if index == 2 & count > 0:
+#         
+#         _htmltags = tag.get('href', None);
+#         
+#         _html = urllib.urlopen(_htmltags).read()
+#         _soup = BeautifulSoup(_html)
+#         tags = _soup('a')
+#         
+#         
+#         index = 0
+#         ind = ind + 1
+#         print _htmltags
+#         count = count - 1
+# 
+#     index = index + 1
+
+
+
+#_html = urllib.urlopen(_htmltags[0]).read()
+#_soup = BeautifulSoup(html)
+# for tag in tags:
+#     #html = urllib.urlopen(url).read()
+#     #soup = BeautifulSoup(html)
+#
+#     if(special_count == position - 1):
+#         #_htmltags = tags.get('href', None)
+#         #print _htmltags
+#         special_count
+#     print index
+#     special_count = special_count + 1
+#     #print tag.get('href', None)
+#     #print special_count
+#
+#
+#     #print 'Contents:',tag.contents[0]
